@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="site">"Site - "</string>
+    <string name="quality">"Quality - "</string>
+    <string name="failed_to_load_your_movies">failed to load your movies</string>
+    <string name="no_data_to_show">no data to show</string>
+
+</resources>
