@@ -1,8 +1,8 @@
 package com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.view.interfaces;
 
 import com.mahmoud.mohammed.movieapp.mvp.base.BaseView;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
-import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model.Trailer;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Trailer;
 
 import java.util.List;
 

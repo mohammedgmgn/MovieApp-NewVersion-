@@ -39,18 +39,21 @@ public class MainScreenPresenter extends BasePresenter<MainScreenView> {
 
     private void loadMovies(String MoviesType) {
         getView().setLoading();
-        MoviesService.getMovieResponse(MoviesType, new ValueCallback<MovieResponse>() {
-            @Override
-            public void onReceiveValue(MovieResponse movieResponse) {
-                getView().setLoaded();
-                getView().showMovies(movieResponse.getMovies());
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                getView().setLoadingError();
-            }
-        });
+        MoviesService.getResponse(MovieResponse.class, Constants.BASE_URL + MoviesType + Constants.API_KEY_SUFFIX + Constants.API_KEY,
+                new ValueCallback<Object>() {
+                    @Override
+                    public void onReceiveValue(Object object) {
+                        getView().setLoaded();
+                        MovieResponse movieResponse = (MovieResponse) object;
+                        getView().showMovies(movieResponse.getMovies());
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        getView().setLoadingError();
+                    }
+                });
 
     }
 }

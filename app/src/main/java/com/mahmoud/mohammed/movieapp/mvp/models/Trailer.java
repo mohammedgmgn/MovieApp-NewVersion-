@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model;
+package com.mahmoud.mohammed.movieapp.mvp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Trailer implements Parcelable {
-    public static final Parcelable.Creator<Trailer> CREATOR = new Parcelable.Creator<Trailer>() {
+    public static final Creator<Trailer> CREATOR = new Creator<Trailer>() {
         @Override
         public Trailer createFromParcel(Parcel source) {
             return new Trailer(source);

@@ -1,7 +1,7 @@
 package com.mahmoud.mohammed.movieapp.mvp.adapters;
 
 
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
 
 /**
  * Created by mohammed on 11/2/2017.

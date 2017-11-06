@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.mahmoud.mohammed.movieapp.R;
 import com.mahmoud.mohammed.movieapp.mvp.base.BaseActivity;
-import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model.Review;
+import com.mahmoud.mohammed.movieapp.mvp.models.Review;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.presenter.MovieReviewsPresnter;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.view.interfaces.MovieReviews;
 

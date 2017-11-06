@@ -8,8 +8,8 @@ import com.android.volley.VolleyError;
 import com.mahmoud.mohammed.movieapp.mvp.base.BasePresenter;
 import com.mahmoud.mohammed.movieapp.mvp.dataresponsemodel.TrailerResponse;
 import com.mahmoud.mohammed.movieapp.mvp.helper.Constants;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
 import com.mahmoud.mohammed.movieapp.mvp.network.MoviesService;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.view.interfaces.MovieDetailViews;
 
 /**
@@ -35,19 +35,22 @@ public class MovieDetailPresenter extends BasePresenter<MovieDetailViews> {
 
     public void loadMovieTrailers(Intent intent) {
         Movie movie = intent.getExtras().getParcelable(Constants.MOVIE);
+        String requestUrl = Constants.BASE_URL + movie.getId() + Constants.VIDEOS + Constants.API_KEY_SUFFIX + Constants.API_KEY;
+        MoviesService.getResponse(TrailerResponse.class, requestUrl, new ValueCallback<Object>() {
 
-        MoviesService.getTrailersResponse(movie.getId(), new ValueCallback<TrailerResponse>() {
             @Override
-            public void onReceiveValue(TrailerResponse trailerResponse) {
+            public void onReceiveValue(Object object) {
+                TrailerResponse trailerResponse = (TrailerResponse) object;
                 getView().displayMovieTrailer(trailerResponse.getTrailers());
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-               getView().showError(error.getMessage());
+                getView().showError(error.getMessage());
+
             }
         });
-
     }
 
     public void loadMovieReviews(Intent intent) {

@@ -1,7 +1,7 @@
 package com.mahmoud.mohammed.movieapp.mvp.ui.main.view.interfaces;
 
 import com.mahmoud.mohammed.movieapp.mvp.base.BaseView;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
 
 import java.util.List;
 

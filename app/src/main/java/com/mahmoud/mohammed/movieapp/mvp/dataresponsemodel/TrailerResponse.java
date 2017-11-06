@@ -1,7 +1,7 @@
 package com.mahmoud.mohammed.movieapp.mvp.dataresponsemodel;
 
 import com.google.gson.annotations.SerializedName;
-import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model.Trailer;
+import com.mahmoud.mohammed.movieapp.mvp.models.Trailer;
 
 import java.util.List;
 

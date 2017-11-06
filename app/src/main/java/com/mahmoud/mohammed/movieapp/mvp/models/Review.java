@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model;
+package com.mahmoud.mohammed.movieapp.mvp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Review implements Parcelable {
-    public static final Parcelable.Creator<Review> CREATOR = new Parcelable.Creator<Review>() {
+    public static final Creator<Review> CREATOR = new Creator<Review>() {
         @Override
         public Review createFromParcel(Parcel source) {
             return new Review(source);

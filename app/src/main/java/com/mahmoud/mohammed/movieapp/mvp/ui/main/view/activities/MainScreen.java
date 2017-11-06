@@ -17,7 +17,7 @@ import com.mahmoud.mohammed.movieapp.mvp.adapters.MovieAdapter;
 import com.mahmoud.mohammed.movieapp.mvp.adapters.OnMovieClickListener;
 import com.mahmoud.mohammed.movieapp.mvp.base.BaseActivity;
 import com.mahmoud.mohammed.movieapp.mvp.helper.Constants;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
 import com.mahmoud.mohammed.movieapp.mvp.ui.main.presenter.MainScreenPresenter;
 import com.mahmoud.mohammed.movieapp.mvp.ui.main.view.interfaces.MainScreenView;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.view.activities.DetailActivity;

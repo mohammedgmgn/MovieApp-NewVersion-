@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.mahmoud.mohammed.movieapp.R;
 import com.mahmoud.mohammed.movieapp.mvp.helper.ImageHelper;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
 
 import java.util.List;
 

@@ -20,8 +20,8 @@ import com.mahmoud.mohammed.movieapp.R;
 import com.mahmoud.mohammed.movieapp.mvp.adapters.TrailerAdapter;
 import com.mahmoud.mohammed.movieapp.mvp.base.BaseActivity;
 import com.mahmoud.mohammed.movieapp.mvp.helper.ImageHelper;
-import com.mahmoud.mohammed.movieapp.mvp.ui.main.model.Movie;
-import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.model.Trailer;
+import com.mahmoud.mohammed.movieapp.mvp.models.Movie;
+import com.mahmoud.mohammed.movieapp.mvp.models.Trailer;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.presenter.MovieDetailPresenter;
 import com.mahmoud.mohammed.movieapp.mvp.ui.moviedetail.view.interfaces.MovieDetailViews;
 
@@ -35,9 +35,6 @@ public class DetailActivity extends BaseActivity implements MovieDetailViews {
     MovieDetailPresenter presenter;
     @BindView(R.id.toolbartest)
     Toolbar toolbar;
-    @BindView(R.id.favor)
-    FloatingActionButton FavoriteBtn;
-
     @BindView(R.id.collapsingToolbartest)
     CollapsingToolbarLayout collapsingToolbar;
     @BindView(R.id.cover)
@@ -72,7 +69,7 @@ public class DetailActivity extends BaseActivity implements MovieDetailViews {
     TextView voteCountView;
     @BindView(R.id.recyclerViewtrailer)
     RecyclerView recyclerView;
-
+    TrailerAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,7 +142,7 @@ public class DetailActivity extends BaseActivity implements MovieDetailViews {
 
         }
 
-        TrailerAdapter mAdapter = new TrailerAdapter(this, trailerInfo);
+         mAdapter = new TrailerAdapter(this, trailerInfo);
         recyclerView.setAdapter(mAdapter);
 
     }

@@ -18,5 +18,4 @@ public class Constants {
     public static final String DEFAULT_JPG = "/mqdefault.jpg";
     public static final String YOUTUBE_URL = "http://www.youtube.com/watch?v=";
 
-
 }
